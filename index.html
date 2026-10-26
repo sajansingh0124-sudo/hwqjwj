@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Through Deep Time: A Time Traveler’s Journal</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Caveat:wght@700&display=swap">
+<style>
+:root{--bg:#efe6d2;--paper:#f8f1e0;--ink:#2b2118;--mute:#6b5b4a;--acc:#8a3b1f;--line:#c9b895;--chip:#e4d6b6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1812;--paper:#292219;--ink:#efe3cb;--mute:#b6a58a;--acc:#e59a6c;--line:#4a3e2e;--chip:#3a3023}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 Georgia,"Iowan Old Style",serif}
+header{padding:2.2rem 1.2rem 1rem;max-width:760px;margin:auto}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:0 0 .4rem;font-weight:700}
+.sub{color:var(--mute);font-style:italic;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;padding:.5rem 1rem;max-width:100%}
+nav button{font:inherit;font-size:.9rem;background:none;border:1px solid transparent;color:var(--ink);padding:.35rem .8rem;border-radius:2px;cursor:pointer}
+nav button[aria-current="true"]{background:var(--ink);color:var(--bg)}
+nav button:focus-visible,.pn button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+main{max-width:760px;margin:1.2rem auto;padding:0 1.2rem}
+article{background:var(--paper);border:1px solid var(--line);padding:1.6rem 1.4rem;box-shadow:6px 6px 0 var(--line)}
+article[hidden]{display:none}
+.date{font-weight:700;color:var(--acc);margin:0}
+h2{font-size:1.8rem;margin:.1rem 0 1rem;line-height:1.2}
+p{margin:0 0 1rem}
+.j{font-style:italic}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1rem;margin:1.2rem 0;padding:1rem;border:1px dashed var(--mute);font-size:.95rem;line-height:1.5}
+dt{font-weight:700;color:var(--acc)}dd{margin:0}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem}
+ul{padding-left:1.2rem;margin:0 0 1rem}li{margin-bottom:.4rem}
+.cause{background:var(--chip);border-left:5px solid var(--acc);padding:.8rem 1rem;margin:1rem 0;font-size:.97rem}
+.bar{display:flex;height:2.4rem;border:1px solid var(--ink);margin:1rem 0 .3rem;font-size:.72rem;line-height:1.1}
+.bar span{display:flex;align-items:center;justify-content:center;text-align:center;border-right:1px solid var(--ink);padding:0 2px}
+.bar span:last-child{border:0}
+.small{font-size:.85rem;color:var(--mute)}
+.pn{display:flex;justify-content:space-between;margin-top:1.4rem}
+.pn button{font:inherit;background:var(--ink);color:var(--bg);border:0;padding:.55rem 1rem;cursor:pointer;border-radius:2px}
+.pn button:disabled{opacity:.3;cursor:default}
+ol.ref{padding-left:1.2rem}ol.ref li{font-size:.95rem;line-height:1.5}
+footer{max-width:760px;margin:1.5rem auto 2rem;padding:0 1.2rem;color:var(--mute);font-size:.85rem}
+@media (max-width:520px){dl{grid-template-columns:1fr}dt{margin-top:.4rem}}
+.hero{max-width:none;margin:0;padding:0;background:#1e1610;color:#f3e7cf}
+.hero .in{max-width:760px;margin:auto;padding:2.8rem 1.2rem 2.2rem}
+.hero h1{font-family:Fraunces,Georgia,serif;font-size:clamp(2.8rem,11vw,5.2rem);font-weight:800;letter-spacing:-.02em;margin:0 0 .6rem}
+.hero .kick{margin:0 0 .6rem;color:#e0b070;font-style:italic}
+.hero .sub{color:#d9c8a6;font-size:1.2rem;max-width:30rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.chips b{font-weight:400;font-size:.85rem;border:1px solid #e0b07099;border-radius:99px;padding:.2rem .85rem}
+.strata{display:flex;height:14px}.strata i{flex:1}
+nav button{border-color:var(--line)}
+nav button[aria-current="true"]{background:var(--ch);color:#fff;border-color:var(--ch)}
+nav button:not([aria-current="true"]):hover{border-color:var(--ch)}
+article{border-top:8px solid var(--ch)}
+h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:2rem}
+.ic{display:block;font-size:2.4rem;line-height:1;margin-bottom:.4rem}
+.date{color:var(--ch)}
+dl{border:0;border-left:5px solid var(--ch);background:color-mix(in srgb,var(--ch) 12%,transparent)}
+dt{color:var(--ch)}
+.cause{border-left-color:var(--ch)}
+li::marker{color:var(--ch)}
+li.mass{list-style:none;margin-left:-1.2rem;padding:.35rem .7rem;border-left:5px solid #c0392b;background:color-mix(in srgb,#c0392b 16%,transparent);font-weight:700}
+.pn button{background:var(--ch);color:#fff}
+.bar span:nth-child(1){background:#b5502b;color:#fff}.bar span:nth-child(2){background:#2f7d6d;color:#fff}.bar span:nth-child(3){background:#3e6fa8;color:#fff}.bar span:nth-child(4){background:#7a8f2e;color:#fff}
+.bar{border-radius:4px;overflow:hidden}
+.ban{margin:-1.6rem -1.4rem 1.3rem;padding:1.5rem 1.4rem;font-size:3rem;letter-spacing:.5rem;line-height:1;background:linear-gradient(120deg,var(--ch),color-mix(in srgb,var(--ch) 40%,#1e1610));text-shadow:0 4px 12px rgba(0,0,0,.4)}
+.date{font-family:Caveat,"Segoe Script","Bradley Hand",cursive;font-size:1.65rem;line-height:1.2;margin-bottom:.2rem}
+.date+h2+.j::first-letter{font-family:Fraunces,Georgia,serif;font-size:3.5rem;float:left;line-height:.85;padding:.3rem .55rem 0 0;color:var(--ch);font-weight:800}
+article{box-shadow:8px 8px 0 color-mix(in srgb,var(--ch) 35%,transparent)}
+nav{background-image:linear-gradient(var(--pc,#8a3b1f),var(--pc,#8a3b1f));background-repeat:no-repeat;background-size:var(--p,0%) 4px;background-position:left bottom;transition:background-size .5s}
+@keyframes grow{from{transform:scaleX(0)}to{transform:none}}
+.strata i{transform-origin:left;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.strata i:nth-child(2){animation-delay:.1s}.strata i:nth-child(3){animation-delay:.2s}.strata i:nth-child(4){animation-delay:.3s}.strata i:nth-child(5){animation-delay:.4s}.strata i:nth-child(6){animation-delay:.5s}.strata i:nth-child(7){animation-delay:.6s}
+@media (prefers-reduced-motion:reduce){.strata i,nav{animation:none;transition:none}}
+body{font-size:19px}
+main,footer{max-width:860px}.hero .in{max-width:860px}
+.hero{background:radial-gradient(ellipse at 80% 0,#6a3318 0,transparent 55%),#1e1610}
+nav button{border-radius:99px}
+article{border-radius:14px;overflow:hidden;box-shadow:0 22px 44px -22px rgba(0,0,0,.5);background-image:radial-gradient(color-mix(in srgb,var(--ink) 8%,transparent) 1px,transparent 1px);background-size:7px 7px}
+.ban{height:clamp(130px,26vw,190px);font-size:0;letter-spacing:0;background:none;text-shadow:none;padding:0}.ban svg{display:block}
+.date,.qc b{color:color-mix(in srgb,var(--ch) 70%,var(--ink))}
+.qs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.75rem;margin:1.4rem 0}
+.qc{padding:.8rem .95rem;border-radius:10px;border-top:4px solid var(--ch);background:color-mix(in srgb,var(--ch) 12%,transparent);font-size:.93rem;line-height:1.5}
+.qc:last-child{grid-column:1/-1}
+.qc b{display:block;font-family:Fraunces,Georgia,serif;margin-bottom:.2rem}
+.cause{border-radius:0 10px 10px 0}
+.pn button{border-radius:99px;padding:.6rem 1.3rem}
+h3{font-family:Fraunces,Georgia,serif}
+html{scroll-behavior:smooth}
+article{margin-bottom:2.4rem;scroll-margin-top:4.2rem}
+nav a{font-size:.9rem;color:var(--ink);padding:.35rem .85rem;border:1px solid var(--line);border-radius:99px;text-decoration:none;display:inline-block}
+nav a[aria-current="true"]{background:var(--ch);color:#fff;border-color:var(--ch)}
+.pn a{background:var(--ch);color:#fff;border-radius:99px;padding:.6rem 1.3rem;text-decoration:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+article{display:none}
+article.on{display:block}
+html:not(.js) main:not(:has(:target)) article:first-child,html:not(.js) article:target{display:block}
+</style>
+</head>
+<body>
+<header class="hero"><div class="in"><p class="kick">The field journal of a time traveler</p><h1>Through Deep Time</h1><p class="sub">One planet. Billions of years. Countless changes in life.</p><div class="chips"><b>4.54 Ga of history</b><b>6 chapters</b><b>4 mass extinctions</b></div></div><div class="strata" aria-hidden="true"><i style="background:#8a6d3b"></i><i style="background:#b5502b"></i><i style="background:#2f7d6d"></i><i style="background:#3e6fa8"></i><i style="background:#7a8f2e"></i><i style="background:#7b4a8c"></i><i style="background:#6b5b4a"></i></div></header>
+<nav id="nav" aria-label="Chapters"></nav>
+<main id="main"></main>
+<footer>General Biology 2 · Digital Storytelling Project · Story website</footer>
+
+<script>
+document.documentElement.className="js";var S=[
+{n:"Opening",date:"Journal entry 0 · Departure",t:"Why I’m leaving the present",
+j:["I am a time traveler, and this is my field journal. My machine has one rule: I can only travel forward, from the oldest moment I can reach to the newest. So my first stop is the birth of Earth, and my last stop is today.","Along the way I will not just list dates and animals. I want to find out how changing environments, evolution, and extinction shaped the living world I came from. Each entry answers five questions: When are we? What is Earth like? What life is here? What changes? Why does it matter?"],
+x:'<h3>My route (NOT TO SCALE)</h3><div class="bar" role="img" aria-label="Unequal timeline of the four time divisions"><span style="flex:8">Precambrian 4.54 Ga to 538.8 Ma</span><span style="flex:2">Paleozoic</span><span style="flex:1.4">Meso.</span><span style="flex:1">Ceno.</span></div><p class="small">NOT TO SCALE. The Precambrian is about 88% of Earth’s history, so it would fill almost the whole bar if drawn to scale. Ga = billion years ago. Ma = million years ago.</p><p>Key terms: an <b>eon</b> is the largest slice of geologic time and an <b>era</b> is a slice inside an eon. The Precambrian is not one unit. It is three eons: Hadean, Archean, and Proterozoic.</p>'},
+{n:"Precambrian",date:"Journal entry 1 · 4.54 Ga to 538.8 Ma (Hadean, Archean, Proterozoic eons)",t:"Chapter 1: A world without animals",
+j:["The ground is hot and ugly. Hadean Earth (4.54 to 4.0 Ga) is battered by space rocks, and there is no air I can breathe. Later, in the Archean (4.0 to 2.5 Ga), I find shallow seas holding mats of tiny microbes. Their layered rock mounds, called stromatolites, are among the oldest signs of life, dating to about 3.5 Ga.","Then I notice bubbles. Some microbes make food from sunlight and release oxygen as waste. For a long time the oxygen is soaked up by iron in the oceans. Around 2.4 Ga it finally spills into the air, in the Great Oxidation Event. In the Proterozoic, cells with a nucleus (eukaryotes) appear by about 1.8 to 1.6 Ga. Near the end, around 575 to 539 Ma, I see the soft, flat Ediacaran organisms, some of the first large multicellular life."],
+q:["4.54 Ga to 538.8 Ma. Hadean, Archean, and Proterozoic eons.","Starts hot and rocky. Oceans form. The air has almost no free oxygen until about 2.4 Ga. Ice ages happen late in the Proterozoic.","Bacteria, archaea, stromatolite builders, eukaryotes, then Ediacaran organisms.","Oxygen builds up. Many oxygen-hating microbes lose their habitats.","Oxygen and cells with nuclei made complex life possible."],
+e:["First life: microbes, about 3.5 Ga or earlier","Photosynthesis releases oxygen, followed by the Great Oxidation Event, about 2.4 Ga","Eukaryotic cells appear, about 1.8 to 1.6 Ga","Multicellular Ediacaran life, about 575 to 539 Ma"],
+c:"Cause → effect: Photosynthetic microbes released oxygen → oxygen rose in the oceans and air → oxygen-using life, including eukaryotes and later animals, could evolve."},
+{n:"Paleozoic",date:"Journal entry 2 · 538.8 to 251.9 Ma (Paleozoic Era)",t:"Chapter 2: Animals explode, then move onto land",
+j:["My machine lands in a warm sea and I almost drop my notebook. The water is full of animals with shells, eyes, and legs. In about 15 to 20 million years starting near 538 Ma, the main animal body plans appear. Scientists call this the Cambrian explosion. Trilobites crawl past my boots.","Later I walk on land that was empty before. Plants colonized it about 470 Ma, and their roots began building soil. By about 375 Ma, fish with limbs like Tiktaalik are moving toward shallow water and the first four-legged animals follow. By about 315 Ma, animals lay eggs with a protective membrane, called amniotic eggs, so they can breed far from water. The coal forests of the Carboniferous are huge and humid.","But this age has a dark side. About 445 Ma, glaciers grow and seas drop, and many marine species vanish. Another crisis hits near 372 Ma. Then, at 251.9 Ma, I see the worst day in all my travels: the end-Permian mass extinction, nicknamed the Great Dying. Roughly 80 to 95% of marine species disappear, and many land species too. The cause is huge volcanic eruptions in Siberia (the Siberian Traps). They pumped out carbon dioxide, which warmed the planet and left oceans low in oxygen."],
+q:["538.8 to 251.9 Ma. Paleozoic Era.","Warm seas at first, then ice ages, then hot and dry Pangaea. Land plants and forests spread.","Trilobites, early fish, land plants, tetrapods, insects, early reptiles.","Two major mass extinctions: Late Ordovician (about 445 Ma) and end-Permian (251.9 Ma).","Land ecosystems, soil, and the vertebrate body plan began here. The Great Dying cleared space for new groups."],
+e:["Cambrian explosion, from about 538 Ma","First land plants, about 470 Ma","First tetrapods (four-limbed animals), about 375 Ma","Amniotic egg evolves, about 315 Ma","MASS EXTINCTION: Late Ordovician, about 445 Ma (glaciation and falling sea level)","MASS EXTINCTION: end-Permian, 251.9 Ma (Siberian Traps volcanism)"],
+c:"Cause → effect: Siberian Traps eruptions released CO₂ → global warming and oceans with little oxygen → about 90% of marine species died → survivors, like early dinosaur relatives, could spread into empty niches."},
+{n:"Mesozoic",date:"Journal entry 3 · 251.9 to 66 Ma (Mesozoic Era)",t:"Chapter 3: The age of reptiles",
+j:["The world I step into is bare and recovering. At first the supercontinent Pangaea is hot, and reptiles do well. By about 230 Ma, the first dinosaurs run through the scrub. Tiny, furry mammals appear around the same time, hiding in the shadows and mostly active at night.","Near 201 Ma, I watch another extinction, the end-Triassic. Volcanic eruptions as Pangaea split apart changed the climate, and many large reptile rivals of the dinosaurs died. This leaves dinosaurs as the top land animals in the Jurassic. About 150 Ma I see feathered Archaeopteryx glide between trees, showing that birds descend from dinosaurs. Around 130 Ma, the first flowering plants open, and insects and flowers begin to shape each other’s evolution.","The last scene is the hardest to watch. At 66 Ma, an asteroid about 10 km wide hits what is now Mexico (Chicxulub). Dust and soot block sunlight, plants fail, and food chains collapse. Non-bird dinosaurs, marine reptiles, and about three quarters of all species disappear."],
+q:["251.9 to 66 Ma. Triassic, Jurassic, and Cretaceous periods.","Pangaea breaks into continents. Climate is warm, and sea levels are high.","Dinosaurs, early mammals, pterosaurs, birds, flowering plants, and insects.","End-Triassic extinction (about 201 Ma) and end-Cretaceous extinction (66 Ma).","Birds are living dinosaurs. Mammals survived by being small, and flowers changed land ecosystems."],
+e:["First dinosaurs and first mammals, about 230 Ma","First birds (Archaeopteryx), about 150 Ma","First flowering plants, about 130 Ma","MASS EXTINCTION: end-Triassic, about 201 Ma (volcanism as Pangaea split)","MASS EXTINCTION: end-Cretaceous (K-Pg), 66 Ma (asteroid impact)"],
+c:"Cause → effect: An asteroid struck at 66 Ma → dust blocked sunlight and food chains collapsed → non-bird dinosaurs went extinct → mammals gained open niches and diversified."},
+{n:"Cenozoic",date:"Journal entry 4 · 66 Ma to today (Cenozoic Era)",t:"Chapter 4: The rise of mammals",
+j:["The crater is still smoking when I arrive. In the first few million years, ferns spread back and small mammals start to grow bigger. Within about 10 million years there are early whales’ ancestors, bats, and primates. Forests dominate until the world cools. Starting about 25 to 20 Ma, grasslands expand, and grazing animals like horses evolve long legs and tough teeth.","In the last 2.6 million years, ice ages come and go, and I can see mammoths on cold plains. Modern humans, Homo sapiens, appear in Africa about 300,000 years ago (0.3 Ma). That is the blink at the end of my trip, yet humans now change climates and habitats faster than almost any species before."],
+q:["66 Ma to today. Paleogene, Neogene, and Quaternary periods.","Earth cools overall. Ice sheets form, and grasslands spread.","Mammals, birds, flowering plants, grasses, primates, and humans.","A sixth mass extinction may now be underway, driven by human activity (Barnosky et al., 2011).","This is the world that shaped us, and the one we are changing."],
+e:["Mammals diversify after the K-Pg extinction, from 66 Ma","Grasslands spread and grazers evolve, from about 25 to 20 Ma","Homo sapiens appears, about 0.3 Ma (300,000 years ago)"],
+c:"Cause → effect: Global cooling and drying → forests shrank and grasslands grew → grazing mammals with long legs and tough teeth evolved."},
+{n:"Ending",date:"Journal entry 5 · Back to the present",t:"Ending: How did deep time shape biodiversity today?",
+j:["I step out of the machine and the world looks different. Every living thing around me is a survivor of a very long story.","Here is what my journal taught me. First, <b>environment changes life</b>. Oxygen, warming, ice, and falling seas decided which species could survive. Second, <b>evolution fills empty niches</b>. After each extinction, surviving groups diversified: reptiles after the Permian, dinosaurs after the Triassic, and mammals after the Cretaceous. Third, <b>extinction resets the game</b>. As conditions changed, some groups disappeared while others diversified into empty niches.","Biodiversity today, from the birds in my yard (dinosaur descendants) to the grasses, flowers, and people, exists because life survived at least five major mass extinctions and kept branching. Deep time also warns me: recovery after mass extinctions took millions of years. If we cause extinctions now, nature will not bounce back on a human timescale. Deep time shaped biodiversity today, and what we do next is the newest entry."],
+x:'<h3>Quick recap of the required checks</h3><ul><li>All six chapters in order: Opening, Precambrian, Paleozoic, Mesozoic, Cenozoic, Ending.</li><li>14 biological events and 4 mass extinctions (Ordovician, Permian, Triassic, Cretaceous), and 4 cause-and-effect links.</li><li>Important: life does not climb a “ladder” toward humans. It branches like a tree.</li></ul>'},
+{n:"References",date:"Sources and credits",t:"References and project notes",
+x:'<h3>Credible sources</h3><ol class="ref"><li>International Commission on Stratigraphy. <i>International Chronostratigraphic Chart</i> (latest version). stratigraphy.org.</li><li>Knoll, A. H. (2003). <i>Life on a Young Planet: The First Three Billion Years of Evolution on Earth.</i> Princeton University Press.</li><li>Lyons, T. W., Reinhard, C. T., &amp; Planavsky, N. J. (2014). The rise of oxygen in Earth’s early ocean and atmosphere. <i>Nature, 506</i>, 307–315.</li><li>Benton, M. J. (2015). <i>When Life Nearly Died: The Greatest Mass Extinction of All Time</i> (2nd ed.). Thames &amp; Hudson.</li><li>Schulte, P., et al. (2010). The Chicxulub asteroid impact and mass extinction at the Cretaceous-Paleogene boundary. <i>Science, 327</i>, 1214–1218.</li><li>Barnosky, A. D., et al. (2011). Has the Earth’s sixth mass extinction already arrived? <i>Nature, 471</i>, 51–57.</li></ol><p class="small">Dates are rounded and can shift slightly between sources. Use the ICS chart for official boundaries.</p><h3>Media credits and responsible use</h3><p>This site uses text and simple shapes only, with no copied images. The narration is written in original student wording. AI disclosure: an AI assistant helped draft and organize this script, and the student reviewed it and checked it against the sources above. No AI-generated paleoart is used.</p>'}
+];
+var C=["#8a6d3b","#b5502b","#2f7d6d","#3e6fa8","#7a8f2e","#7b4a8c","#6b5b4a"],IC=["🧭","🌋","🪸","🦕","🦣","🌍","📚"];
+var SC=["🧭🕰️🗺️","🌋🦠🌊","🪸🐚🐟🌿","🦖🦕🌋☄️","🦣🐎🌾🧍","🌍🌱🕊️","📚🔬"];
+function scene(i){var K=[["#2b2f5e","#e8a56a"],["#3a1410","#e2562b"],["#0f4c5c","#7fd1c7"],["#1d3a6b","#f3b562"],["#5f9bd0","#f6e3b4"],["#12304a","#8ed1a0"],["#3b2f22","#a58b66"]][i],st="";
+if(i<4)for(var k=0;k<14;k++){st+="<circle cx='"+((k*97+i*53)%800)+"' cy='"+((k*37+i*11)%70+8)+"' r='"+(1+k%2)+"' fill='#fff' opacity='.6'/>"}
+var M=["<g fill='none' stroke='#fff' stroke-width='2' opacity='.8' transform='translate(650 70)'><circle r='28'/><path d='M0-24L6 0 0 24-6 0Z' fill='#fff'/></g>",
+"<path d='M470 170L560 70H600L690 170Z' fill='#2a120d'/><path d='M560 70L580 100 600 70Z' fill='#ff7a2f'/><circle cx='580' cy='50' r='16' fill='#ff7a2f' opacity='.45'/><ellipse cx='150' cy='166' rx='42' ry='17' fill='#5b2a1c'/><ellipse cx='218' cy='168' rx='28' ry='11' fill='#6d3322'/>",
+"<g stroke='#0b3a45' stroke-width='5' fill='none' stroke-linecap='round'><path d='M140 170q-12-30 0-60t0-50'/><path d='M200 170q12-26 0-50t0-40'/><path d='M620 170q-10-34 0-64'/><path d='M670 170q12-30 0-56'/></g><circle cx='300' cy='100' r='5' fill='#fff' opacity='.5'/><circle cx='320' cy='80' r='3' fill='#fff' opacity='.5'/>",
+"<path d='M720 5L570 88' stroke='#fff' stroke-width='3' opacity='.7'/><circle cx='566' cy='90' r='10' fill='#ffd9a0'/><g fill='#0f2a4d'><path d='M90 170L112 92 134 170Z'/><path d='M150 170L168 112 186 170Z'/><path d='M260 170L278 120 296 170Z'/></g>",
+"<g stroke='#3d4f12' stroke-width='3' fill='none' stroke-linecap='round'><path d='M60 170q4-30 14-40M80 170q0-26-8-38M100 170q6-30 18-36M300 170q4-28 14-38M322 170q-2-26-10-36M520 170q4-30 14-40M545 170q0-26-8-38'/></g>",
+"<path d='M640 170V120' stroke='#0b2b22' stroke-width='8'/><circle cx='640' cy='100' r='34' fill='#1f6a45'/><circle cx='612' cy='122' r='24' fill='#2a8458'/><circle cx='670' cy='124' r='22' fill='#2a8458'/>",
+"<g><rect x='520' y='110' width='30' height='60' fill='#5a3d22'/><rect x='552' y='96' width='26' height='74' fill='#7a5230'/><rect x='580' y='118' width='34' height='52' fill='#4a3320'/><rect x='616' y='104' width='24' height='66' fill='#8a6238'/></g>"][i];
+return "<svg viewBox='0 0 800 170' preserveAspectRatio='xMidYMid slice' width='100%' height='100%'><defs><linearGradient id='g"+i+"' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='"+K[0]+"'/><stop offset='1' stop-color='"+K[1]+"'/></linearGradient></defs><rect width='800' height='170' fill='url(#g"+i+")'/>"+st+"<circle cx='"+(140+i*95)+"' cy='62' r='26' fill='#fff6d6' opacity='.85'/><path d='M0 130Q150 90 300 125T600 120T800 110V170H0Z' fill='#000' opacity='.2'/>"+M+"<path d='M0 150Q200 118 400 148T800 140V170H0Z' fill='#000' opacity='.35'/><path d='M0 166Q300 150 800 163V170H0Z' fill='#000' opacity='.5'/></svg>"}
+var nav=document.getElementById("nav"),main=document.getElementById("main"),cur=0;
+var L=["When are we?","What is Earth like?","What life is here?","What changes?","Why does it matter?"];
+S.forEach(function(s,i){
+var b=document.createElement("a");b.href="#s"+i;b.textContent=s.n;b.style.setProperty("--ch",C[i]);nav.appendChild(b);
+var a=document.createElement("article");a.id="s"+i;a.style.setProperty("--ch",C[i]);
+var h='<div class="ban" aria-hidden="true">'+scene(i)+'</div><p class="date">'+s.date+'</p><h2>'+s.t+'</h2>';
+(s.j||[]).forEach(function(p){h+='<p class="j">'+p+'</p>'});
+if(s.q){h+='<div class="qs">';s.q.forEach(function(v,k){h+='<div class="qc"><b>'+L[k]+'</b>'+v+'</div>'});h+='</div>'}
+if(s.e){h+='<h3>Biological events and extinctions</h3><ul>';s.e.forEach(function(v){h+='<li'+(v.indexOf('MASS')==0?' class="mass"':'')+'>'+v+'</li>'});h+='</ul>'}
+if(s.c)h+='<div class="cause">'+s.c+'</div>';
+if(s.x)h+=s.x;
+h+='<div class="pn">'+(i>0?'<a href="#s'+(i-1)+'">Previous</a>':'<span></span>')+(i<S.length-1?'<a href="#s'+(i+1)+'">Next</a>':'<span></span>')+'</div>';
+a.innerHTML=h;main.appendChild(a)});
+function go(i){cur=i;var A=main.children,B=nav.children;
+for(var k=0;k<A.length;k++){A[k].hidden=k!=i;B[k].setAttribute("aria-current",k==i)}
+nav.style.setProperty("--p",(i/(S.length-1)*100)+"%");nav.style.setProperty("--pc",C[i]);window.scrollTo(0,0);if(history.replaceState)try{history.replaceState(null,"","#"+S[i].n.toLowerCase())}catch(e){}}
+var st=0,hs=location.hash.replace("#","");S.forEach(function(s,i){if(s.n.toLowerCase()==hs)st=i});
+main.addEventListener("click",function(e){var t=e.target.closest("button[data-go]");if(t&&!t.disabled)go(+t.getAttribute("data-go"))});
+document.onkeydown=function(e){if(e.key=="ArrowRight"&&cur<S.length-1)go(cur+1);if(e.key=="ArrowLeft"&&cur>0)go(cur-1)};
+function go(i){var A=main.children,B=nav.children,k;if(i<0||i>=A.length)return;for(k=0;k<A.length;k++){A[k].className=k==i?"on":"";B[k].setAttribute("aria-current",k==i)}nav.style.setProperty("--p",(i/(A.length-1)*100)+"%");nav.style.setProperty("--pc",C[i]);cur=i;if(i==0)window.scrollTo(0,0);else A[i].scrollIntoView()}
+function spy(){var y=window.innerHeight*.35,c=0,A=main.children,B=nav.children,k;for(k=0;k<A.length;k++){if(A[k].getBoundingClientRect().top<y)c=k}for(k=0;k<B.length;k++)B[k].setAttribute("aria-current",k==c);nav.style.setProperty("--p",(c/(A.length-1)*100)+"%");nav.style.setProperty("--pc",C[c]);cur=c}
+document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("a[href^='#s']");if(t){e.preventDefault();go(+t.getAttribute("href").slice(2))}});
+go(st);
+</script>
+</body>
+</html>
